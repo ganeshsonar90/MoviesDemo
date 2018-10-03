@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         if (currentPage == totalPages) {
           sorting(movies);
         } else {
+          getMovieData(currentPage+1);
         }
 
 
