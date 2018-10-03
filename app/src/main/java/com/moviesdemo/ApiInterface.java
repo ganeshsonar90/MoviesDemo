@@ -14,7 +14,7 @@ public interface ApiInterface {
 
   //https://jsonmock.hackerrank.com/api/movies/search/?Title=spiderman&page=1
 
-  @GET()
+  @GET("search/")
   Call<MovieResponse> getMovies(
       @Query("Title") String title,
       @Query("page") int pageIndex

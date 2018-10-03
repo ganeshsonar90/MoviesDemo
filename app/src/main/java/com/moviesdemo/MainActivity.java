@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     ApiInterface apiService =
         ApiClient.getClient().create(ApiInterface.class);
 
-    Call<MovieResponse> call = apiService.getMovies("", pagenumber);
+    Call<MovieResponse> call = apiService.getMovies("Spiderman", pagenumber);
     call.enqueue(new Callback<MovieResponse>() {
       @Override
       public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         if (currentPage == totalPages) {
           sorting(movies);
         } else {
-          getMovieData(currentPage);
         }
 
 
